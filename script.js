@@ -38,7 +38,7 @@
             const message = `Halo, saya ${name}%0A%0ANo. HP: ${phone}%0AJenis Perangkat: ${device}%0AKeluhan: ${problem}%0A%0AMohon informasi lebih lanjut untuk service. Terima kasih!`;
             
             // Redirect to WhatsApp
-            window.open(`https://wa.me/62821xxxxxxxx?text=${message}`, '_blank');
+            window.open(`https://wa.me/6281364087823?text=${message}`, '_blank');
             
             // Reset form
             event.target.reset();
