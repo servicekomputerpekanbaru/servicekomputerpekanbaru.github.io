@@ -18,7 +18,6 @@ Butuh bantuan cepat untuk masalah laptop atau PC?
 - Datang ke lokasi atau antar-jemput
 
 ## Kontak & Kunjungi
-📞 **0813 6408 7823**  
 🌐 [servicekomputerpekanbaru.github.io](https://servicekomputerpekanbaru.github.io)
 
 Tulis "service komputer pekanbaru" di Google atau langsung hubungi kami—solusi cepat untuk perangkat Anda!

@@ -1,31 +1,81 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Service Komputer Pekanbaru & Service Laptop Pekanbaru terpercaya. Teknisi profesional, harga terjangkau, garansi service. Layanan antar jemput gratis se-Pekanbaru. Hubungi sekarang!">
-    <meta name="keywords" content="service komputer pekanbaru, service laptop pekanbaru, repair komputer pekanbaru, service laptop terdekat, service komputer terdekat, teknisi laptop pekanbaru, service notebook pekanbaru">
+    <meta name="description"
+        content="Service Komputer Pekanbaru & Service Laptop Pekanbaru terpercaya. Teknisi profesional, harga terjangkau, garansi service. Layanan antar jemput gratis se-Pekanbaru. Hubungi sekarang!">
+    <meta name="keywords"
+        content="service komputer pekanbaru, service laptop pekanbaru, repair komputer pekanbaru, service laptop terdekat, service komputer terdekat, teknisi laptop pekanbaru, service notebook pekanbaru">
     <meta name="author" content="Service Komputer Laptop Pekanbaru">
     <meta property="og:title" content="Service Komputer & Laptop Pekanbaru - Profesional & Terpercaya">
-    <meta property="og:description" content="Solusi terbaik untuk service komputer dan laptop di Pekanbaru. Teknisi berpengalaman, harga terjangkau, garansi service 30 hari.">
+    <meta property="og:description"
+        content="Solusi terbaik untuk service komputer dan laptop di Pekanbaru. Teknisi berpengalaman, harga terjangkau, garansi service 30 hari.">
     <meta property="og:type" content="website">
     <title>Service Komputer Pekanbaru & Service Laptop Pekanbaru - Profesional Terpercaya</title>
     <link rel="icon" href="./img/service_komputer_pekanbaru.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#10b981',
+                        dark: '#0f172a',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="google-site-verification" content="8BXw_nsiIIOo3S3_jQy6aKXS4iAcyiMgra_nXOm3-a4" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-padding {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+        }
+    </style>
 </head>
-<body>
-    <!-- Schema.org JSON-LD for SEO -->
+
+<body class="bg-white text-slate-900 overflow-x-hidden pb-20 md:pb-0">
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Service Komputer & Laptop Pekanbaru",
-        "image": "https://servicekomputerpekanbaru.com/img/service_komputer_pekanbaru.jpg",
+        "image": "https://servicekomputerpekanbaru.github.io/img/service_komputer_pekanbaru.jpg",
         "description": "Service komputer dan laptop terpercaya di Pekanbaru dengan teknisi profesional, harga terjangkau, dan garansi service 30 hari.",
         "address": {
             "@type": "PostalAddress",
@@ -33,12 +83,7 @@
             "addressRegion": "Riau",
             "addressCountry": "ID"
         },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 0.5071,
-            "longitude": 101.4478
-        },
-        "telephone": "+62-813-6408-7823",
+        "telephone": "+62-823-8340-2137",
         "priceRange": "Rp 50.000 - Rp 500.000",
         "openingHours": "Mo-Sa 08:00-20:00",
         "aggregateRating": {
@@ -49,282 +94,586 @@
     }
     </script>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">
-                <span>💻</span>
-                <span >Service Komputer Pekanbaru</span>
+    <!-- Header (Desktop) -->
+    <header class="fixed top-0 w-full z-50 glass border-b border-slate-100 hidden md:block">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 font-bold text-2xl tracking-tight text-slate-900">
+                <span class="text-primary"><i data-lucide="cpu" class="w-8 h-8"></i></span>
+                <span>Azzam<span class="text-primary">Comp</span></span>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#layanan">Layanan</a></li>
-                <li><a href="#harga">Harga</a></li>
-                <li><a href="#testimoni">Testimoni</a></li>
-                <li><a href="#kontak" class="cta-button">Hubungi Kami</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul class="flex gap-10 font-semibold text-slate-500 text-sm uppercase tracking-widest">
+                    <li><a href="#home" class="hover:text-primary transition">Beranda</a></li>
+                    <li><a href="#layanan" class="hover:text-primary transition">Layanan</a></li>
+                    <li><a href="#produk" class="hover:text-primary transition">Produk</a></li>
+                    <li><a href="#harga" class="hover:text-primary transition">Harga</a></li>
+                    <li><a href="#kontak"
+                            class="px-6 py-2.5 bg-slate-900 text-white rounded-full hover:bg-primary transition shadow-lg">Hubungi</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Header (Mobile) -->
+    <header
+        class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 md:hidden p-4 flex justify-between items-center">
+        <div class="flex items-center gap-2 font-bold text-lg text-slate-900">
+            <span class="text-primary"><i data-lucide="cpu" class="w-6 h-6"></i></span>
+            <span>AzzamComp</span>
+        </div>
+        <a href="tel:+6282383402137"
+            class="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center text-primary border border-slate-100">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+        </a>
+    </header>
+
+    <!-- Mobile Bottom Navigation (Android Style) -->
+    <nav
+        class="fixed bottom-4 left-4 right-4 bg-white/90 backdrop-blur-xl border border-slate-200/50 flex justify-around items-center h-16 z-50 md:hidden px-2 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+        <a href="#home" class="nav-item flex flex-col items-center gap-1 text-slate-400 transition-all duration-300">
+            <i data-lucide="home" class="w-5 h-5"></i>
+            <span class="text-[9px] font-bold uppercase tracking-tighter">Beranda</span>
+        </a>
+        <a href="#layanan" class="nav-item flex flex-col items-center gap-1 text-slate-400 transition-all duration-300">
+            <i data-lucide="wrench" class="w-5 h-5"></i>
+            <span class="text-[9px] font-bold uppercase tracking-tighter">Layanan</span>
+        </a>
+        <a href="#produk" class="nav-item flex flex-col items-center gap-1 text-slate-400 transition-all duration-300">
+            <i data-lucide="package" class="w-5 h-5"></i>
+            <span class="text-[9px] font-bold uppercase tracking-tighter">Produk</span>
+        </a>
+        <a href="#harga" class="nav-item flex flex-col items-center gap-1 text-slate-400 transition-all duration-300">
+            <i data-lucide="credit-card" class="w-5 h-5"></i>
+            <span class="text-[9px] font-bold uppercase tracking-tighter">Harga</span>
+        </a>
+        <a href="https://wa.me/6282383402137?text=Hallo+Azzam+Comp%2C+Saya+mendapatkan+informasi+dari+website+Muhammad+Purwadi%2C+saya+ingin+konsultasi+seputar+laptop+dan+komputer+saya"
+            class="flex flex-col items-center gap-1">
+            <div
+                class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-sky-200">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+            </div>
+        </a>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero" id="beranda">
-        <div class="hero-overlay"></div>
-        <div class="hero-content fade-in-up">
-            <h1>
-                <span class="hero-highlight">Service Komputer Pekanbaru</span> & 
-                <span class="hero-highlight">Service Laptop Pekanbaru</span> Terpercaya
+    <section id="home" class="min-h-screen flex items-center pt-32 pb-20 px-6 relative overflow-hidden bg-slate-900">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="./img/hero.jpg" alt="Background" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/80 to-slate-900"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-sky-500/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest border border-sky-500/20">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                </span>
+                Buka Hari Ini 08:00 - 20:00
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black text-white leading-[1.1] tracking-tight">
+                Service <span class="text-primary italic">Komputer</span> & <br> <span class="text-primary italic">Laptop</span> Pekanbaru.
             </h1>
-            <p>Solusi profesional untuk semua masalah komputer dan laptop Anda. Teknisi berpengalaman, harga terjangkau, dan garansi service 30 hari. Melayani seluruh wilayah Pekanbaru dengan layanan antar jemput GRATIS!</p>
-            <div class="hero-buttons">
-                <a href="#kontak" class="btn-primary">Konsultasi Gratis</a>
-                <a href="https://wa.me/6281364087823" class="btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp Kami</a>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-medium">
+                Solusi profesional untuk semua masalah komputer dan laptop Anda. Teknisi berpengalaman, harga terjangkau, dan garansi service 30 hari. Melayani seluruh wilayah Pekanbaru dengan layanan antar jemput GRATIS!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#kontak" class="px-10 py-5 bg-primary text-white rounded-2xl font-bold text-center hover:bg-white hover:text-slate-900 transition shadow-2xl shadow-sky-500/20 flex items-center justify-center gap-3">
+                    Konsultasi Sekarang <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </a>
+                <a href="https://wa.me/6282383402137?text=Hallo+Azzam+Comp%2C+Saya+mendapatkan+informasi+dari+website+Muhammad+Purwadi%2C+saya+ingin+konsultasi+seputar+laptop+dan+komputer+saya" class="px-10 py-5 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-2xl font-bold text-center hover:bg-white hover:text-slate-900 transition flex items-center justify-center gap-3">
+                    <i data-lucide="message-square" class="w-5 h-5"></i> Chat WhatsApp
+                </a>
+            </div>
+            <div class="pt-8 flex items-center justify-center gap-8 border-t border-white/10">
+                <div>
+                    <div class="text-2xl font-bold text-white">2000+</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Selesai</div>
+                </div>
+                <div class="w-px h-10 bg-white/10"></div>
+                <div>
+                    <div class="text-2xl font-bold text-white">4.8/5</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Rating</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="keunggulan">
-        <div class="container">
-            <h2 class="section-title">Kenapa Pilih Kami?</h2>
-            <p class="section-subtitle">Kami memberikan layanan terbaik untuk service komputer dan laptop di Pekanbaru</p>
-            
-            <div class="features-grid">
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">👨‍💻</div>
-                    <h3>Teknisi Profesional</h3>
-                    <p>Tim teknisi bersertifikat dengan pengalaman lebih dari 5 tahun dalam menangani berbagai masalah hardware dan software</p>
+    <!-- Keunggulan Section -->
+    <section id="keunggulan" class="section-padding bg-slate-50/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 space-y-4">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Kenapa Pilih Kami?</h2>
+                <p class="text-lg text-slate-500 font-medium">Kami memberikan layanan terbaik untuk service komputer dan
+                    laptop di Pekanbaru.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div class="w-14 h-14 bg-sky-50 text-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Teknisi Profesional</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Tim teknisi bersertifikat dengan pengalaman lebih
+                        dari 5 tahun dalam menangani berbagai masalah hardware dan software.</p>
                 </div>
-                
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Proses Cepat</h3>
-                    <p>Service express untuk masalah ringan bisa selesai dalam hitungan jam. Pengerjaan efisien tanpa mengurangi kualitas</p>
+                <!-- Feature 2 -->
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div
+                        class="w-14 h-14 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Proses Cepat</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Service express untuk masalah ringan bisa selesai
+                        dalam hitungan jam. Pengerjaan efisien tanpa mengurangi kualitas.</p>
                 </div>
-                
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">💰</div>
-                    <h3>Harga Terjangkau</h3>
-                    <p>Harga kompetitif dan transparan tanpa biaya tersembunyi. Konsultasi dan diagnosa GRATIS untuk semua pelanggan</p>
+                <!-- Feature 3 -->
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div class="w-14 h-14 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="badge-dollar-sign" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Harga Terjangkau</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Harga kompetitif dan transparan tanpa biaya
+                        tersembunyi. Konsultasi dan diagnosa GRATIS untuk semua pelanggan.</p>
                 </div>
-                
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Garansi 30 Hari</h3>
-                    <p>Kami berikan garansi service selama 30 hari untuk memberikan ketenangan pikiran kepada Anda</p>
+                <!-- Feature 4 -->
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div class="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Garansi 30 Hari</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Kami berikan garansi service selama 30 hari untuk
+                        memberikan ketenangan pikiran kepada Anda.</p>
                 </div>
-                
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">🚗</div>
-                    <h3>Antar Jemput Gratis</h3>
-                    <p>Layanan antar jemput gratis se-Pekanbaru untuk kenyamanan Anda. Tidak perlu repot datang ke tempat kami</p>
+                <!-- Feature 5 -->
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div
+                        class="w-14 h-14 bg-indigo-50 text-indigo-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="truck" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Antar Jemput Gratis</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Layanan antar jemput gratis se-Pekanbaru untuk
+                        kenyamanan Anda. Tidak perlu repot datang ke tempat kami.</p>
                 </div>
-                
-                <div class="feature-card fade-in-up">
-                    <div class="feature-icon">📱</div>
-                    <h3>Layanan 24/7</h3>
-                    <p>Customer service siap melayani pertanyaan Anda kapan saja via WhatsApp, telepon, atau datang langsung ke workshop</p>
+                <!-- Feature 6 -->
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition duration-500">
+                    <div class="w-14 h-14 bg-pink-50 text-pink-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="smartphone" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Layanan 24/7</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Customer service siap melayani pertanyaan Anda
+                        kapan saja via WhatsApp, telepon, atau datang langsung ke workshop.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="layanan">
-        <div class="container">
-            <h2 class="section-title">Layanan Service Kami</h2>
-            <p class="section-subtitle">Menangani semua jenis kerusakan komputer dan laptop dengan profesional</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>💻 Service Laptop Pekanbaru</h3>
-                    <ul class="service-list">
-                        <li>Laptop mati total / tidak mau nyala</li>
-                        <li>Layar laptop rusak / blank / bergaris</li>
-                        <li>Keyboard laptop tidak berfungsi</li>
-                        <li>Laptop overheat / panas berlebih</li>
-                        <li>Laptop lemot / hang sering</li>
-                        <li>Baterai laptop tidak bisa charge</li>
-                        <li>Laptop kena air / tumpahan cairan</li>
-                        <li>Ganti LCD / LED laptop semua merk</li>
-                        <li>Upgrade RAM & SSD laptop</li>
-                        <li>Instalasi ulang Windows / macOS</li>
+    <section id="layanan" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 space-y-4">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Layanan Service Kami.</h2>
+                <p class="text-lg text-slate-500 font-medium">Menangani semua jenis kerusakan komputer dan laptop dengan
+                    profesional.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Service Laptop -->
+                <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3"><span class="text-primary"><i
+                                data-lucide="laptop" class="w-6 h-6"></i></span> Service
+                        Laptop</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm font-medium">
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Laptop mati total / tidak mau
+                            nyala</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Layar laptop rusak / blank /
+                            bergaris</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Keyboard laptop tidak berfungsi
+                        </li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Laptop overheat / panas berlebih
+                        </li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Laptop lemot / hang sering</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Baterai laptop tidak bisa charge
+                        </li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Laptop kena air / tumpahan cairan
+                        </li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Ganti LCD / LED laptop semua merk
+                        </li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Upgrade RAM & SSD laptop</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Instalasi ulang Windows / macOS
+                        </li>
                     </ul>
                 </div>
-                
-                <div class="service-card">
-                    <h3>🖥️ Service Komputer Pekanbaru</h3>
-                    <ul class="service-list">
-                        <li>Komputer mati total / tidak booting</li>
-                        <li>Blue screen of death (BSOD)</li>
-                        <li>Komputer restart sendiri</li>
-                        <li>Motherboard bermasalah</li>
-                        <li>VGA card rusak / tidak detect</li>
-                        <li>Power supply tidak berfungsi</li>
-                        <li>Harddisk / SSD rusak</li>
-                        <li>Rakit PC baru sesuai budget</li>
-                        <li>Upgrade komponen PC</li>
-                        <li>Instalasi software & driver</li>
+                <!-- Service Komputer -->
+                <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3"><span class="text-emerald-500"><i
+                                data-lucide="monitor" class="w-6 h-6"></i></span>
+                        Service Komputer</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm font-medium">
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Komputer mati total / tidak
+                            booting</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Blue screen of death (BSOD)</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Komputer restart sendiri</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Motherboard bermasalah</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> VGA card rusak / tidak detect</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Power supply tidak berfungsi</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Harddisk / SSD rusak</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Rakit PC baru sesuai budget</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Upgrade komponen PC</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Instalasi software & driver</li>
                     </ul>
                 </div>
-                
-                <div class="service-card">
-                    <h3>🔧 Layanan Tambahan</h3>
-                    <ul class="service-list">
-                        <li>Recovery data hilang / terhapus</li>
-                        <li>Backup & restore data</li>
-                        <li>Pembersihan virus & malware</li>
-                        <li>Optimasi performa sistem</li>
-                        <li>Setting jaringan & internet</li>
-                        <li>Instalasi printer & scanner</li>
-                        <li>Konsultasi IT & troubleshooting</li>
-                        <li>Maintenance rutin perangkat</li>
-                        <li>Setting CCTV & DVR</li>
-                        <li>Service monitor & proyektor</li>
+                <!-- Layanan Tambahan -->
+                <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3"><span class="text-amber-500"><i
+                                data-lucide="wrench" class="w-6 h-6"></i></span>
+                        Layanan Lainnya</h3>
+                    <ul class="space-y-3 text-slate-600 text-sm font-medium">
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Recovery data hilang / terhapus
+                        </li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Backup & restore data</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Pembersihan virus & malware</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Optimasi performa sistem</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Setting jaringan & internet</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Instalasi printer & scanner</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Konsultasi IT & troubleshooting
+                        </li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Maintenance rutin perangkat</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Setting CCTV & DVR</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i> Service monitor & proyektor</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Dipercaya Ribuan Pelanggan</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Angka-angka yang membuktikan kualitas layanan kami</p>
-            
-            <div class="why-grid">
-                <div class="why-item">
-                    <div class="why-number">5+</div>
-                    <h4>Tahun Pengalaman</h4>
-                    <p>Melayani service komputer dan laptop sejak 2019</p>
+    <!-- Stats Section -->
+    <section class="py-24 bg-primary text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" />
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#grid)" />
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-3xl md:text-5xl font-black tracking-tight">Dipercaya Ribuan Pelanggan.</h2>
+                <p class="text-sky-100 font-medium">Angka-angka yang membuktikan kualitas layanan kami.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                <div class="space-y-2">
+                    <div class="text-5xl font-black">5+</div>
+                    <div class="text-xs font-bold uppercase tracking-[0.2em] text-sky-100">Tahun Pengalaman</div>
                 </div>
-                
-                <div class="why-item">
-                    <div class="why-number">2000+</div>
-                    <h4>Pelanggan Puas</h4>
-                    <p>Lebih dari 2000 perangkat berhasil diperbaiki</p>
+                <div class="space-y-2">
+                    <div class="text-5xl font-black">2000+</div>
+                    <div class="text-xs font-bold uppercase tracking-[0.2em] text-sky-100">Pelanggan Puas</div>
                 </div>
-                
-                <div class="why-item">
-                    <div class="why-number">98%</div>
-                    <h4>Tingkat Keberhasilan</h4>
-                    <p>Rasio keberhasilan perbaikan sangat tinggi</p>
+                <div class="space-y-2">
+                    <div class="text-5xl font-black">98%</div>
+                    <div class="text-xs font-bold uppercase tracking-[0.2em] text-sky-100">Success Rate</div>
                 </div>
-                
-                <div class="why-item">
-                    <div class="why-number">4.8★</div>
-                    <h4>Rating Pelanggan</h4>
-                    <p>Rating tinggi dari review pelanggan kami</p>
+                <div class="space-y-2">
+                    <div class="text-5xl font-black flex items-center justify-center gap-1">4.8<i data-lucide="star"
+                            class="w-10 h-10 fill-current text-amber-400"></i></div>
+                    <div class="text-xs font-bold uppercase tracking-[0.2em] text-sky-100">Rating Pelanggan</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing" id="harga">
-        <div class="container">
-            <h2 class="section-title">Estimasi Harga Service</h2>
-            <p class="section-subtitle">Harga terjangkau dan transparan untuk service komputer dan laptop</p>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Service Ringan</h3>
-                    <div class="pricing-price">Rp 50K - 150K</div>
-                    <ul class="pricing-features">
-                        <li>Instalasi ulang Windows</li>
-                        <li>Pembersihan virus</li>
-                        <li>Instalasi software</li>
-                        <li>Setting BIOS</li>
-                        <li>Cleaning laptop</li>
-                        <li>Konsultasi gratis</li>
+    <section id="harga" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 space-y-4">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight">Estimasi Harga Service.</h2>
+                <p class="text-slate-500">Harga terjangkau dan transparan untuk service komputer dan laptop.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Service Ringan -->
+                <div class="p-12 rounded-[3rem] bg-slate-50 border border-slate-100 flex flex-col space-y-8">
+                    <div class="space-y-2">
+                        <h4 class="text-xl font-bold">Service Ringan</h4>
+                        <div class="text-3xl font-black text-primary italic">Rp 50K - 150K</div>
+                    </div>
+                    <ul class="space-y-4 text-slate-600 text-sm font-medium flex-grow">
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Instalasi ulang Windows</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Pembersihan virus</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Instalasi software</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Setting BIOS</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Cleaning laptop</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Konsultasi gratis</li>
                     </ul>
-                    <a href="#kontak" class="btn-primary">Konsultasi</a>
+                    <a href="#kontak"
+                        class="w-full py-4 bg-white text-slate-900 border border-slate-200 text-center rounded-2xl font-bold hover:border-primary transition">Pilih
+                        Paket</a>
                 </div>
-                
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">PALING POPULER</div>
-                    <h3>Service Sedang</h3>
-                    <div class="pricing-price">Rp 150K - 350K</div>
-                    <ul class="pricing-features">
-                        <li>Ganti keyboard laptop</li>
-                        <li>Ganti LCD laptop</li>
-                        <li>Upgrade RAM & SSD</li>
-                        <li>Ganti baterai laptop</li>
-                        <li>Perbaikan motherboard ringan</li>
-                        <li>Recovery data sederhana</li>
-                        <li>Garansi 30 hari</li>
+                <!-- Service Sedang -->
+                <div
+                    class="p-12 rounded-[3rem] bg-white border-4 border-primary shadow-2xl shadow-sky-100 flex flex-col space-y-8 relative md:scale-105 z-10">
+                    <div
+                        class="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-black px-5 py-1.5 rounded-full uppercase tracking-[0.2em]">
+                        Paling Populer</div>
+                    <div class="space-y-2 text-center">
+                        <h4 class="text-xl font-bold">Service Sedang</h4>
+                        <div class="text-3xl font-black text-primary italic">Rp 150K - 350K</div>
+                    </div>
+                    <ul class="space-y-4 text-slate-600 text-sm font-medium flex-grow">
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0"></i> Ganti keyboard laptop</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0"></i> Ganti LCD laptop</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0"></i> Upgrade RAM & SSD</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0"></i> Ganti baterai laptop</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0"></i> Perbaikan motherboard ringan</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0"></i> Recovery data sederhana</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-emerald-500 shrink-0"></i> Garansi 30 hari</li>
                     </ul>
-                    <a href="#kontak" class="btn-primary">Konsultasi</a>
+                    <a href="#kontak"
+                        class="w-full py-5 bg-primary text-white text-center rounded-2xl font-bold shadow-xl shadow-sky-200 hover:bg-sky-600 transition">Konsultasi</a>
                 </div>
-                
-                <div class="pricing-card">
-                    <h3>Service Berat</h3>
-                    <div class="pricing-price">Rp 350K+</div>
-                    <ul class="pricing-features">
-                        <li>Perbaikan motherboard</li>
-                        <li>Ganti VGA card</li>
-                        <li>Recovery data kompleks</li>
-                        <li>Rakit PC custom</li>
-                        <li>Servis komponen IC</li>
-                        <li>Perbaikan liquid damage</li>
-                        <li>Garansi 30 hari</li>
+                <!-- Service Berat -->
+                <div class="p-12 rounded-[3rem] bg-slate-50 border border-slate-100 flex flex-col space-y-8">
+                    <div class="space-y-2 text-left">
+                        <h4 class="text-xl font-bold">Service Berat</h4>
+                        <div class="text-3xl font-black text-primary italic">Rp 350K+</div>
+                    </div>
+                    <ul class="space-y-4 text-slate-600 text-sm font-medium flex-grow">
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Perbaikan motherboard</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Ganti VGA card</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Recovery data kompleks</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Rakit PC custom</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Servis komponen IC</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Perbaikan liquid damage</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-primary shrink-0"></i> Garansi 30 hari</li>
                     </ul>
-                    <a href="#kontak" class="btn-primary">Konsultasi</a>
+                    <a href="#kontak"
+                        class="w-full py-4 bg-white text-slate-900 border border-slate-200 text-center rounded-2xl font-bold hover:border-primary transition">Pilih
+                        Paket</a>
                 </div>
             </div>
-            
-            <p style="text-align: center; margin-top: 2rem; color: var(--color-gray);">
-                <em>* Harga dapat berbeda tergantung tingkat kerusakan dan ketersediaan sparepart. Konsultasi dan diagnosa GRATIS!</em>
+            <p class="text-center mt-12 text-slate-400 text-xs italic font-medium italic">
+                * Harga dapat berbeda tergantung tingkat kerusakan dan ketersediaan sparepart. Konsultasi dan diagnosa
+                GRATIS!
             </p>
         </div>
     </section>
 
+    <!-- Produk Section -->
+    <section id="produk"
+        class="section-padding bg-slate-900 text-white overflow-hidden rounded-[4rem] mx-4 md:mx-8 my-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 space-y-4">
+                <h2 class="text-4xl md:text-6xl font-black tracking-tight">Produk Unggulan.</h2>
+                <p class="text-slate-400 text-lg">Pilihan hardware dan perangkat terbaik untuk performa maksimal.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div
+                    class="group relative bg-white p-4 rounded-[3rem] border border-slate-100 hover:shadow-2xl transition duration-500">
+                    <div class="aspect-[3/4] rounded-[2.5rem] overflow-hidden bg-slate-800">
+                        <img src="./img/ssd.png" alt="SSD"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                        <div
+                            class="absolute top-6 right-6 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                            Best Seller</div>
+                    </div>
+                    <div class="mt-8 space-y-3 px-2 pb-2">
+                        <h4 class="text-xl font-bold">SSD NVMe Storage</h4>
+                        <p class="text-slate-500 text-sm">Upgrade PC/Laptop hingga 10x lipat lebih cepat.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold">Mulai Rp 350rb</span>
+                            <a href="https://wa.me/6282383402137?text=Beli+SSD"
+                                class="w-12 h-12 bg-slate-900 text-white rounded-2xl flex items-center justify-center hover:bg-primary transition shadow-xl">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div
+                    class="group relative bg-white p-4 rounded-[3rem] border border-slate-100 hover:shadow-2xl transition duration-500">
+                    <div class="aspect-[3/4] rounded-[2.5rem] overflow-hidden bg-slate-800">
+                        <img src="./img/ram.png" alt="RAM"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                        <div
+                            class="absolute top-6 right-6 bg-emerald-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                            Performance</div>
+                    </div>
+                    <div class="mt-8 space-y-3 px-2 pb-2">
+                        <h4 class="text-xl font-bold">RAM DDR4 / DDR5</h4>
+                        <p class="text-slate-500 text-sm">Multitasking lancar tanpa hambatan.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold">Mulai Rp 250rb</span>
+                            <a href="https://wa.me/6282383402137?text=Beli+RAM"
+                                class="w-12 h-12 bg-slate-900 text-white rounded-2xl flex items-center justify-center hover:bg-primary transition shadow-xl">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div
+                    class="group relative bg-white p-4 rounded-[3rem] border border-slate-100 hover:shadow-2xl transition duration-500">
+                    <div class="aspect-[3/4] rounded-[2.5rem] overflow-hidden bg-slate-800">
+                        <img src="./img/laptop.png" alt="Laptop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                        <div
+                            class="absolute top-6 right-6 bg-amber-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                            New Arrival</div>
+                    </div>
+                    <div class="mt-8 space-y-3 px-2 pb-2">
+                        <h4 class="text-xl font-bold">Laptop New/Second</h4>
+                        <p class="text-slate-500 text-sm">Berbagai merk laptop kondisi prima & bergaransi.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold">Rp 2jt-an</span>
+                            <a href="https://wa.me/6282383402137?text=Katalog+Laptop"
+                                class="w-12 h-12 bg-slate-900 text-white rounded-2xl flex items-center justify-center hover:bg-primary transition shadow-xl">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div
+                    class="group relative bg-white p-4 rounded-[3rem] border border-slate-100 hover:shadow-2xl transition duration-500">
+                    <div class="aspect-[3/4] rounded-[2.5rem] overflow-hidden bg-slate-800">
+                        <img src="./img/accessories.png" alt="Aksesoris"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                    </div>
+                    <div class="mt-8 space-y-3 px-2 pb-2">
+                        <h4 class="text-xl font-bold">Aksesoris Lengkap</h4>
+                        <p class="text-slate-500 text-sm">Keyboard, Mouse, Headset, dan lainnya.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold">Mulai Rp 50rb</span>
+                            <a href="https://wa.me/6282383402137?text=Aksesoris"
+                                class="w-12 h-12 bg-slate-900 text-white rounded-2xl flex items-center justify-center hover:bg-primary transition shadow-xl">
+                                <i data-lucide="plus" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimoni">
-        <div class="container">
-            <h2 class="section-title">Testimoni Pelanggan</h2>
-            <p class="section-subtitle">Apa kata mereka yang sudah menggunakan layanan kami</p>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Service laptop saya di sini sangat memuaskan! Laptop yang tadinya mati total bisa hidup lagi. Teknisinya ramah dan profesional. Harga juga terjangkau. Recommended banget untuk service laptop di Pekanbaru!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">RH</div>
-                        <div class="author-info">
-                            <h5>Rina Hasanah</h5>
-                            <p>Mahasiswi, Marpoyan</p>
-                            <div class="rating">★★★★★</div>
+    <section id="testimoni" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 space-y-4">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight">Testimoni Pelanggan.</h2>
+                <p class="text-lg text-slate-500 font-medium">Apa kata mereka yang sudah menggunakan layanan kami.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div
+                    class="p-10 rounded-[3rem] bg-slate-50 border border-slate-100 space-y-8 italic text-slate-600 relative">
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-primary opacity-10"></i>
+                    <p class="relative z-10 leading-relaxed font-medium">"Service laptop saya di sini sangat memuaskan!
+                        Laptop yang tadinya mati total bisa hidup lagi. Teknisinya ramah dan profesional. Harga juga
+                        terjangkau. Recommended banget untuk service laptop di Pekanbaru!"</p>
+                    <div class="not-italic flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold shadow-lg">
+                            RH</div>
+                        <div>
+                            <div class="font-black text-slate-900">Rina Hasanah</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Mahasiswi, Marpoyan
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Pelayanan cepat dan memuaskan! Komputer kantor saya yang bermasalah langsung ditangani dengan baik. Ada layanan antar jemput gratis pula. Sangat membantu sekali. Terima kasih untuk service komputer Pekanbaru terbaik!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">BP</div>
-                        <div class="author-info">
-                            <h5>Budi Prasetyo</h5>
-                            <p>Pengusaha, Sukajadi</p>
-                            <div class="rating">★★★★★</div>
+                <!-- Testimonial 2 -->
+                <div
+                    class="p-10 rounded-[3rem] bg-slate-50 border border-slate-100 space-y-8 italic text-slate-600 relative">
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-emerald-500 opacity-10"></i>
+                    <p class="relative z-10 leading-relaxed font-medium">"Pelayanan cepat dan memuaskan! Komputer kantor
+                        saya yang bermasalah langsung ditangani dengan baik. Ada layanan antar jemput gratis pula.
+                        Sangat membantu sekali. Terima kasih untuk service komputer Pekanbaru terbaik!"</p>
+                    <div class="not-italic flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold shadow-lg">
+                            BP</div>
+                        <div>
+                            <div class="font-black text-slate-900">Budi Prasetyo</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Pengusaha, Sukajadi
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Laptop gaming saya overheat parah. Setelah di-service di sini, langsung dingin dan lancar lagi. Teknisinya juga menjelaskan masalahnya dengan detail. Puas banget! Ini tempat service laptop Pekanbaru yang recommended."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AF</div>
-                        <div class="author-info">
-                            <h5>Andi Firmansyah</h5>
-                            <p>Gamer, Tenayan Raya</p>
-                            <div class="rating">★★★★★</div>
+                <!-- Testimonial 3 -->
+                <div
+                    class="p-10 rounded-[3rem] bg-slate-50 border border-slate-100 space-y-8 italic text-slate-600 relative">
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-amber-500 opacity-10"></i>
+                    <p class="relative z-10 leading-relaxed font-medium">"Laptop gaming saya overheat parah. Setelah
+                        di-service di sini, langsung dingin dan lancar lagi. Teknisinya juga menjelaskan masalahnya
+                        dengan detail. Puas banget! Ini tempat service laptop Pekanbaru yang recommended."</p>
+                    <div class="not-italic flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center font-bold shadow-lg">
+                            AF</div>
+                        <div>
+                            <div class="font-black text-slate-900">Andi Firmansyah</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Gamer, Tenayan Raya
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -333,141 +682,172 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Komputer atau Laptop Bermasalah?</h2>
-            <p>Jangan biarkan perangkat rusak mengganggu produktivitas Anda! Hubungi kami sekarang untuk konsultasi dan diagnosa GRATIS.</p>
-            <div class="hero-buttons">
-                <a href="https://wa.me/6281364087823" class="btn-primary" target="_blank" rel="noopener noreferrer">Chat WhatsApp</a>
-                <a href="tel:+6281364087823" class="btn-secondary">Telepon Sekarang</a>
+    <section class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="bg-primary rounded-[4rem] p-12 md:p-24 text-center text-white space-y-10 relative overflow-hidden">
+                <div class="absolute -top-20 -left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-black/10 rounded-full blur-3xl"></div>
+                <h2 class="text-4xl md:text-6xl font-black tracking-tight relative z-10">Komputer atau Laptop
+                    Bermasalah?</h2>
+                <p class="text-sky-50 text-lg md:text-xl max-w-3xl mx-auto font-medium relative z-10">Jangan biarkan
+                    perangkat rusak mengganggu produktivitas Anda! Hubungi kami sekarang untuk konsultasi dan diagnosa
+                    GRATIS.</p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
+                    <a href="https://wa.me/6282383402137?text=Hallo+Azzam+Comp%2C+Saya+mendapatkan+informasi+dari+website+Muhammad+Purwadi%2C+saya+ingin+konsultasi+seputar+laptop+dan+komputer+saya"
+                        class="px-12 py-5 bg-white text-primary rounded-3xl font-black shadow-2xl hover:bg-sky-50 transition">Chat
+                        WhatsApp</a>
+                    <a href="tel:+6282383402137"
+                        class="px-12 py-5 bg-black/20 backdrop-blur-md text-white border border-white/30 rounded-3xl font-black hover:bg-black/30 transition">Telepon
+                        Sekarang</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="kontak">
-        <div class="container">
-            <h2 class="section-title">Hubungi Kami</h2>
-            <p class="section-subtitle">Kami siap membantu menyelesaikan masalah komputer dan laptop Anda</p>
-            
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3 style="margin-bottom: 1.5rem;">Informasi Kontak</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-details">
-                            <h4>Alamat Workshop</h4>
-                            <p>Jl. Sudirman No. XXX, Pekanbaru<br>Riau 28116, Indonesia</p>
+    <section id="kontak" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20">
+            <div class="space-y-12">
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900">Hubungi Kami.</h2>
+                    <p class="text-lg text-slate-500 font-medium">Kami siap membantu menyelesaikan masalah komputer dan
+                        laptop Anda.</p>
+                </div>
+                <div class="grid gap-8">
+                    <div class="flex gap-6">
+                        <div
+                            class="w-16 h-16 bg-slate-50 text-primary rounded-[2rem] flex items-center justify-center shrink-0 border border-slate-100">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-lg">Alamat Workshop</h4>
+                            <p class="text-slate-500 font-medium leading-relaxed">Jl. Sudirman No. XXX,
+                                Pekanbaru<br>Riau 28116, Indonesia</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-details">
-                            <h4>Telepon / WhatsApp</h4>
-                            <p><a href="tel:+6281364087823">+62 813-6408-7823</a></p>
-                            <p><a href="https://wa.me/6281364087823" target="_blank" rel="noopener noreferrer">Chat WhatsApp</a></p>
+                    <div class="flex gap-6">
+                        <div
+                            class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-[2rem] flex items-center justify-center shrink-0 border border-emerald-100">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-lg">Telepon / WhatsApp</h4>
+                            <p class="text-slate-500 font-medium leading-relaxed">+62 823-8340-2137</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p><a href="#">-</a></p>
+                    <div class="flex gap-6">
+                        <div
+                            class="w-16 h-16 bg-amber-50 text-amber-500 rounded-[2rem] flex items-center justify-center shrink-0 border border-amber-100">
+                            <i data-lucide="clock"></i>
                         </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
-                        <div class="contact-details">
-                            <h4>Jam Operasional</h4>
-                            <p>Senin - Sabtu: 08.00 - 20.00 WIB<br>Minggu: 09.00 - 17.00 WIB</p>
+                        <div>
+                            <h4 class="font-black text-lg">Jam Operasional</h4>
+                            <p class="text-slate-500 font-medium leading-relaxed">Senin - Sabtu: 08.00 - 20.00
+                                WIB<br>Minggu: 09.00 - 17.00 WIB</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-form">
-                    <h3 style="margin-bottom: 1.5rem;">Form Konsultasi</h3>
-                    <form onsubmit="handleSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap *</label>
-                            <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">No. WhatsApp / Telepon *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="08xx-xxxx-xxxx">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="device">Jenis Perangkat *</label>
-                            <select id="device" name="device" required>
-                                <option value="">-- Pilih Perangkat --</option>
-                                <option value="laptop">Laptop</option>
-                                <option value="komputer">Komputer / PC</option>
-                                <option value="lainnya">Lainnya</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="problem">Keluhan / Masalah *</label>
-                            <textarea id="problem" name="problem" required placeholder="Jelaskan masalah yang Anda alami..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary" style="width: 100%;">Kirim Konsultasi</button>
-                    </form>
-                </div>
+            </div>
+            <div
+                class="bg-slate-50 p-10 md:p-16 rounded-[3.5rem] border border-slate-100 shadow-2xl shadow-slate-200/50">
+                <h3 class="text-2xl font-black mb-8 text-slate-900">Form Konsultasi</h3>
+                <form onsubmit="handleSubmit(event)" class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Nama
+                            Lengkap</label>
+                        <input type="text" id="name" required placeholder="Contoh: Muhammad Purwadi"
+                            class="w-full px-8 py-5 rounded-[2rem] bg-white border-none focus:ring-4 focus:ring-primary/10 outline-none transition font-bold text-slate-900 shadow-sm">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">No.
+                            WhatsApp</label>
+                        <input type="tel" id="phone" required placeholder="08xx-xxxx-xxxx"
+                            class="w-full px-8 py-5 rounded-[2rem] bg-white border-none focus:ring-4 focus:ring-primary/10 outline-none transition font-bold text-slate-900 shadow-sm">
+                    </div>
+                    <div class="space-y-2">
+                        <label
+                            class="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Perangkat</label>
+                        <select id="device"
+                            class="w-full px-8 py-5 rounded-[2rem] bg-white border-none focus:ring-4 focus:ring-primary/10 outline-none transition font-bold text-slate-900 shadow-sm appearance-none">
+                            <option value="laptop">Laptop</option>
+                            <option value="komputer">Komputer / PC</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Keluhan</label>
+                        <textarea id="problem" required placeholder="Jelaskan masalah Anda secara detail..."
+                            class="w-full px-8 py-5 rounded-[2.5rem] bg-white border-none focus:ring-4 focus:ring-primary/10 outline-none transition font-bold text-slate-900 shadow-sm h-40"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-6 bg-slate-900 text-white rounded-[2rem] font-black shadow-2xl hover:bg-primary transition uppercase tracking-widest text-sm">Kirim
+                        Konsultasi</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>TechRepair PKU</h3>
-                    <p>Solusi terpercaya untuk service komputer Pekanbaru dan service laptop Pekanbaru. Melayani dengan profesional sejak 2019.</p>
+    <footer class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2 font-bold text-2xl tracking-tight text-white">
+                        <span class="text-primary"><i data-lucide="cpu" class="w-8 h-8"></i></span>
+                        <span>AzzamComp</span>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium leading-relaxed">Solusi terpercaya untuk service
+                        komputer Pekanbaru dan service laptop Pekanbaru. Melayani dengan profesional sejak 2019.</p>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Layanan Kami</h3>
-                    <ul class="footer-links">
-                        <li><a href="#layanan">Service Laptop</a></li>
-                        <li><a href="#layanan">Service Komputer</a></li>
-                        <li><a href="#layanan">Recovery Data</a></li>
-                        <li><a href="#layanan">Rakit PC</a></li>
-                        <li><a href="#layanan">Upgrade Komponen</a></li>
+                <div class="space-y-6">
+                    <h4 class="font-black uppercase tracking-widest text-xs text-primary">Our Partners</h4>
+                    <ul class="text-slate-400 text-sm font-bold space-y-4">
+                        <li><a href="https://riauwebhost.com" class="hover:text-white transition">Jasa Pembuatan
+                                Website</a></li>
+                        <li><a href="https://www.mohdpurwadi.web.id" class="hover:text-white transition">Jasa SEO
+                                Professional</a></li>
+                        <li><a href="https://mohdpurwadi.eu.org" class="hover:text-white transition">Web Developer</a>
+                        </li>
+                        <li><a href="https://web.kamparsynergiabadi.com/jasa-pembuatan-aplikasi-pekanbaru"
+                                class="hover:text-white transition">Jasa Aplikasi Website</a></li>
+                        <li><a href="https://softwareakuntansionline.biz.id"
+                                class="hover:text-white transition">Software Akuntansi Online</a></li>
+                        <li><a href="https://hostingerreview2026.netlify.app/" class="hover:text-white transition">Web
+                                Hosting Disc 20%</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Informasi</h3>
-                    <ul class="footer-links">
-                        <li><a href="#keunggulan">Tentang Kami</a></li>
-                        <li><a href="#harga">Harga Service</a></li>
-                        <li><a href="#testimoni">Testimoni</a></li>
-                        <li><a href="#kontak">Hubungi Kami</a></li>
-                        <li><a href="#layanan">Area Layanan</a></li>
+                <div class="space-y-6">
+                    <h4 class="font-black uppercase tracking-widest text-xs text-primary">Informasi</h4>
+                    <ul class="text-slate-400 text-sm font-bold space-y-4">
+                        <li><a href="#keunggulan" class="hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#harga" class="hover:text-white transition">Harga Service</a></li>
+                        <li><a href="#testimoni" class="hover:text-white transition">Testimoni</a></li>
+                        <li><a href="#kontak" class="hover:text-white transition">Hubungi Kami</a></li>
+                        <li><a href="#layanan" class="hover:text-white transition">Area Layanan</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Area Layanan</h3>
-                    <p>Kami melayani seluruh wilayah Pekanbaru termasuk Marpoyan, Sukajadi, Tenayan Raya, Tampan, dan sekitarnya dengan layanan antar jemput gratis.</p>
+                <div class="space-y-6">
+                    <h4 class="font-black uppercase tracking-widest text-xs text-primary">Area Layanan</h4>
+                    <p class="text-slate-400 text-sm font-medium leading-relaxed">Kami melayani seluruh wilayah
+                        Pekanbaru termasuk Marpoyan, Sukajadi, Tenayan Raya, Tampan, dan sekitarnya dengan layanan antar
+                        jemput gratis.</p>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Service Komputer & Laptop Pekanbaru. All rights reserved.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    <strong>Keywords:</strong> service komputer pekanbaru, service laptop pekanbaru, repair komputer pekanbaru, teknisi laptop pekanbaru, service notebook pekanbaru
-                </p>
+            <div class="pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-slate-500 font-bold text-xs uppercase tracking-widest">&copy; 2025 Azzam Comp. Created
+                    by <a style="color: salmon;" href="https://riauwebhost.com">Riauwebhost.com</a>.</p>
+                <div
+                    class="text-[10px] text-slate-600 font-black uppercase tracking-[0.2em] max-w-xl text-center md:text-right leading-relaxed">
+                    Melayani: service komputer pekanbaru, service laptop pekanbaru, repair komputer pekanbaru, teknisi
+                    laptop pekanbaru, service notebook pekanbaru
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
+
 </html>
